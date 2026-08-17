@@ -1,0 +1,24 @@
+{
+  "name": "vantra-integration-tests",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Cross-package integration tests for the Vantra tool suite — verifies model cache sharing, module deduplication, and API coexistence.",
+  "type": "module",
+  "engines": {
+    "node": ">=20.11.0"
+  },
+  "packageManager": "pnpm@11.20.0",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@vantra-design/ask-design-system": "link:../vantra-ask-design-system/packages/core",
+    "@vantra-design/screenreader-empathy": "link:../vantra-screenreader-empathy",
+    "@vantra-design/local-inference": "link:../vantra-local-inference"
+  },
+  "devDependencies": {
+    "vitest": "^4.1.10",
+    "typescript": "^5.9.3"
+  }
+}
